@@ -4,12 +4,15 @@
   "description": "Made with create-react-library",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuquangkhtn/tfs-common-library.git"
+    "url": "git://github.com/vuquangkhtn/tfs-common-library.git"
   },
   "author": "Quang Nguyen",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vuquangkhtn/tfs-common-library/issues"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "homepage": "https://github.com/vuquangkhtn/tfs-common-library#readme",
   "main": "dist/index.js",
