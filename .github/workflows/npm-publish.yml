@@ -15,7 +15,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
       - run: yarn install
       - run: yarn build-storybook
       - run: git config --global user.email "vuquangkhtn@gmail.com"
@@ -32,11 +31,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://npm.pkg.github.com/
       - run: yarn install
-      - run: git config --global user.email "vuquangkhtn@gmail.com"
-      - run: git config --global user.name "Quang Nguyen"
-      - run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/vuquangkhtn/tfs-common-library.git
       - run: npm publish --access public
     env:
       NODE_AUTH_TOKEN: ${{secrets.npm_token}}
